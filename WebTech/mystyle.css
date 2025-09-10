@@ -1,0 +1,29 @@
+body{
+    margin: 0px;
+    background-color: #0498b3;
+}
+
+h1{
+    text-align: center;
+}
+
+.flexbox-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container-horisontal{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.flexbox-item{
+    text-align: center;
+    justify-content: center;
+    width:50%;
+    height: 3rem;
+    margin: 10px;
+    border: 3px, solid, #0045ad;
+}
