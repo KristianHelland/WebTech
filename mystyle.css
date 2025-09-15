@@ -16,14 +16,14 @@ h1{
 .container-horisontal{
     display:flex;
     flex-direction: row;
-    justify-content: center;
+    flex-wrap:wrap;
 }
 
 .flexbox-item{
     text-align: center;
     justify-content: center;
-    width:150%;
-    height: 3rem;
+    width: 45%;
+    min-height: 3rem;
     margin: 10px;
     border: 3px solid #0045ad;
     font-size: 1.5rem;
