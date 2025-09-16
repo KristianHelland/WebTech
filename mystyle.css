@@ -16,15 +16,15 @@ h1{
 .container-horisontal{
     display:flex;
     flex-direction: row;
-    justify-content: center;
+    flex-wrap:wrap;
 }
 
 .flexbox-item{
-    text-align: center;
+    text-align: start;
     justify-content: center;
-    width:150%;
-    height: 3rem;
-    margin: 10px;
+    width: 47%;
+    min-height: 3rem;
+    margin: 1%;
     border: 3px solid #0045ad;
     font-size: 1.5rem;
     background-color: teal;
@@ -41,4 +41,10 @@ h1{
     font-size: 1.5rem;
     
     
+}
+
+#bilder{
+    padding: 1%;
+    width: 10rem;
+    height: 10rem;
 }
