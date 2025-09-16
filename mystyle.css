@@ -25,23 +25,13 @@ h1{
     width: 47%;
     min-height: 3rem;
     margin: 1%;
-    border: 3px solid #0045ad;
+    border: 3px solid #000000;
     font-size: 1.5rem;
     background-color: teal;
 
 }
 
-.flexbox-item1{
-    text-align: center;
-    justify-content: center;
-    width: 47%;
-    min-height: 3rem;
-    margin: 1%;
-    border: 3px solid #0045ad;
-    font-size: 1.5rem;
-    background-color: teal;
 
-}
 
 
 #bilder{
