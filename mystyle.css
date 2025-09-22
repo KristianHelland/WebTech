@@ -43,14 +43,14 @@ h1{
     display: flex;
     justify-self: center;
     margin-top:3px ;
-    width: 33%;
+    width: calc(33% - 8px);
     height: 2rem;
     border: 3px solid #09c0e0;
     transition: width 0.3s ease;
 }
 
 .searchBar:focus{
-    width: calc(100% - 8px);
+    width: calc(100% - 1rem);
     border: 3px solid #1004b3;
     padding: none;
 }
