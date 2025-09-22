@@ -22,13 +22,12 @@ h1{
 .flexbox-item{
     text-align: start;
     justify-content: center;
-    width: 47%;
+    width: calc(50% - 2% - 6px);
     min-height: 3rem;
     margin: 1%;
     border: 3px solid #000000;
     font-size: 1.5rem;
     background-color: teal;
-
 }
 
 
@@ -41,13 +40,17 @@ h1{
 }
 
 .searchBar{
-    width: 33vw;
-    height: 1rem;
-    border: 3px solid #0498b3;
+    display: flex;
+    justify-self: center;
+    margin-top:3px ;
+    width: 33%;
+    height: 2rem;
+    border: 3px solid #09c0e0;
+    transition: width 0.3s ease;
 }
 
-.searchBar:active{
-    width: 100vw;
-    height: 1rem;
+.searchBar:focus{
+    width: calc(100% - 8px);
     border: 3px solid #1004b3;
+    padding: none;
 }
