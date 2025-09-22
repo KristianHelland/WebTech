@@ -39,3 +39,15 @@ h1{
     width: 10rem;
     height: 10rem;
 }
+
+.searchBar{
+    width: 33vw;
+    height: 1rem;
+    border: 3px solid #0498b3;
+}
+
+.searchBar:active{
+    width: 100vw;
+    height: 1rem;
+    border: 3px solid #1004b3;
+}
