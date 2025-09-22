@@ -54,3 +54,28 @@ h1{
     border: 3px solid #1004b3;
     padding: none;
 }
+
+#biggest{
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    justify-content: center;
+    align-content: center;
+    background-color: red;
+}
+
+.target{
+    justify-self: center;
+   border:3px solid black;
+   border-radius:50rem ;
+   padding: 20px;
+}
+
+#red{
+    background-color: red;
+}
+
+#white{
+    background-color: white;
+}
+
