@@ -109,3 +109,45 @@ h1{
     width:100%;
     background-color: green;
 }
+
+
+
+.playing-card{
+    height: 300px;
+    width: 200px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    position: relative;
+    color: black;
+    justify-content: center;
+    top: 100px;
+}
+
+.center{
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    font-size: 4rem;
+    flex-direction: column;
+    
+}
+
+.top, .bottom{
+    position: absolute;
+    font-size: 1.5rem;
+    flex-direction: column;
+}
+
+.top{
+    top: 10px;
+    left: 10px;
+
+}
+
+.bottom{
+    bottom:3px;
+    right: 10px;
+    transform: rotate(180deg);
+}
