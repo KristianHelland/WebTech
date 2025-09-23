@@ -110,9 +110,13 @@ h1{
     background-color: green;
 }
 
-
-
 .playing-card{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.card{
     height: 300px;
     width: 200px;
     background-color: white;
@@ -123,6 +127,8 @@ h1{
     color: black;
     justify-content: center;
     top: 100px;
+    align-items: center;
+
 }
 
 .center{
@@ -141,7 +147,7 @@ h1{
 }
 
 .top{
-    top: 10px;
+    top: 3px;
     left: 10px;
 
 }
