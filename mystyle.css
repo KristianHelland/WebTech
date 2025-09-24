@@ -163,9 +163,10 @@ h1{
 }
 
 .club-center{
-    font-size: 3rem;
+    font-size: 5rem;
     color: black;
-    margin-top: -20px;
+    margin-top: -10px;
+    margin: 10px;
     text-align: center;
     flex-grow: 1;
     display: flex;
@@ -174,6 +175,9 @@ h1{
     flex-direction: row;
     
     
+}
+.oppned{
+    transform: rotate(180deg)
 }
 
 
