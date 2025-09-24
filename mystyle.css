@@ -1,3 +1,4 @@
+/* ØVING 1: */
 body{
     margin: 0px;
     background-color: #0498b3;
@@ -39,6 +40,13 @@ h1{
     height: 10rem;
 }
 
+
+
+
+/* ØVING 2: */
+
+
+
 .searchBar{
     display: flex;
     justify-self: center;
@@ -47,6 +55,7 @@ h1{
     height: 2rem;
     border: 3px solid #09c0e0;
     transition: width 0.3s ease;
+    border-radius: 10px;
 }
 
 .searchBar:focus{
