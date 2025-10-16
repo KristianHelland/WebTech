@@ -10,5 +10,20 @@ input[type="submit"] {
 }
 
 body{
-    background-color: rgb(lightblue);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    background-color:black;
+}
+
+h1{
+    display: flex;
+    color: white;
+    justify-content: center;
+}
+
+.main{
+    padding:3px;
+    background-color: gray;
+    font: bold;
 }

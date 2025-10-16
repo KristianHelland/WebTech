@@ -8,59 +8,61 @@
 </head>
 <body>
 
-    <form>
+    <div>
 
         <h1>User Registration</h1>
         
-        <div>
+        <div class="main">
             <label for="fname">First name:</label>
             <input type="text" id="fname" name="fname" placeholder="Ola" required>
         </div>
 
         <br>
 
-        <div>
+        <div class="main">
             <label for="lname">Last name</label>
             <input type="text" id="lname" name="lname" placeholder="Normann" required>
         </div>
 
         <br>
 
-        <div>
+        <div class="main">
             <label for="pass">Password</label>
             <input type="password" id="pass" name="pass" required minlength="8">
         </div>
 
         <br>
 
-        <div>
+        <div class="main">
             <label for="email">eMail</label>
             <input type="email" id="email" name="email" placeholder="ola@normann.no" required>
         </div>
 
         <br>
 
-        <div>
+        <div class="main">
             <label for="phone">phone</label>
             <input type="tel" id="phone" name="phone" placeholder="555-55-555" required pattern="^\d{3}-\d{2}-\d{3}$">
         </div>
 
         <br>
 
-        <div>
+        <div class="main">
             <label for="birthDate">birthdate</label>
             <input type="date" id="birthDate" name="birthDate" required min="18">
         </div>
 
         <br>
 
-        <label for="pfp">Profile Picture</label>
-        <input type="file" id="pfp" name="pfp">
+        <div class="main">
+            <label for="pfp">Profile Picture</label>
+            <input type="file" id="pfp" name="pfp">
+        </div>
 
         <br>
         <br>
 
-        <div>
+        <div class="main">
             <label for="country">Country</label>
             <select>
                 <option value="norway">Norway</option>
@@ -71,19 +73,24 @@
 
         <br>
 
-        <label for="comment">Comment</label>
-        <textarea id="comment" rows="3" cols="25"></textarea>
-
-        <br>
-        br
-
-        <label for="satisfaction">Satisfaction</label>
-        <input type="range" name="satisfaction" id="satisfaction" min="1" max="10" step="1" value="5">
+        <div class="main">
+            <label for="comment">Comment</label>
+            <textarea id="comment" rows="3" cols="25"></textarea>
+        </div>
 
         <br>
         <br>
 
-        <div>
+        <div class="main">
+            <label for="satisfaction">Satisfaction</label>
+            <input type="range" name="satisfaction" id="satisfaction" min="1" max="10" step="1" value="5">
+        </div>
+
+
+        <br>
+        <br>
+
+        <div class="main">
             <label for="gender">Gender:</label>
 
             <label for="Male">Male</label>
@@ -97,7 +104,8 @@
         </div>
 
         <br>
-
+    
+        <div class="main">
        <fieldset id="group">
             <legend>Interests:</legend>
 
@@ -106,13 +114,15 @@
             <label><input type="checkbox" name="interests" id="Basketball"> Basketball</label>
         </fieldset>
 
+        <br>
 
-  <input type="submit" value="Submit">
 
+        <input type="submit" value="Submit">
+        </div>
 
         <br>
 
-        <div>
+        <div class="main">
             <input type="reset">
         </div>
         
