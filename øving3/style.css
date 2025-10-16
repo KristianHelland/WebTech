@@ -1,0 +1,14 @@
+input[type="submit"] {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* when any checkbox inside the fieldset is checked, enable it */
+#group:has(input[type="checkbox"]:checked) + input[type="submit"] {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+body{
+    background-color: rgb(lightblue);
+}

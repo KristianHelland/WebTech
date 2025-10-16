@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">    
     <title>Form</title>
 </head>
 <body>
 
     <form>
+
+        <h1>User Registration</h1>
         
         <div>
             <label for="fname">First name:</label>
@@ -39,15 +42,73 @@
 
         <div>
             <label for="phone">phone</label>
-            <input type="tel" id="phone" name="phone" placeholder="(+47) 123 45 678" required>
+            <input type="tel" id="phone" name="phone" placeholder="555-55-555" required pattern="^\d{3}-\d{2}-\d{3}$">
         </div>
 
         <br>
 
         <div>
             <label for="birthDate">birthdate</label>
-            <input type="date" id="birthDate" name="birthDate" required>
+            <input type="date" id="birthDate" name="birthDate" required min="18">
         </div>
+
+        <br>
+
+        <label for="pfp">Profile Picture</label>
+        <input type="file" id="pfp" name="pfp">
+
+        <br>
+        <br>
+
+        <div>
+            <label for="country">Country</label>
+            <select>
+                <option value="norway">Norway</option>
+                <option value="sweden">Sweden</option>
+                <option value="denmark">Denmark</option>
+            </select>
+        </div>
+
+        <br>
+
+        <label for="comment">Comment</label>
+        <textarea id="comment" rows="3" cols="25"></textarea>
+
+        <br>
+        br
+
+        <label for="satisfaction">Satisfaction</label>
+        <input type="range" name="satisfaction" id="satisfaction" min="1" max="10" step="1" value="5">
+
+        <br>
+        <br>
+
+        <div>
+            <label for="gender">Gender:</label>
+
+            <label for="Male">Male</label>
+            <input type="radio" id="Male" name="gender" required>
+
+            <label for="Female">Female</label>
+            <input type="radio" id="Female" name="gender">
+
+            <label for="Other">Other</label>
+            <input type="radio" id="Other" name="gender">
+        </div>
+
+        <br>
+
+       <fieldset id="group">
+            <legend>Interests:</legend>
+
+            <label><input type="checkbox" name="interests" id="Football"> Football</label>
+            <label><input type="checkbox" name="interests" id="Tennis"> Tennis</label>
+            <label><input type="checkbox" name="interests" id="Basketball"> Basketball</label>
+        </fieldset>
+
+
+  <input type="submit" value="Submit">
+
 
         <br>
 
@@ -57,48 +118,9 @@
         
         <br>
 
-        <div>
-            <input type="submit">
-        </div>
-
-
 
     </form>
 
    
-
-
-        <script>
-        document.getElementById("ageForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // Forhindrer innsending
-            const birthDateInput = document.getElementById("birthDate").value;
-            const errorMsg = document.getElementById("errorMsg");
-
-            if (!birthDateInput) {
-                errorMsg.textContent = "Du må velge en dato.";
-                return;
-            }
-
-            const birthDate = new Date(birthDateInput);
-            const today = new Date();
-
-            let age = today.getFullYear() - birthDate.getFullYear();
-            const monthDiff = today.getMonth() - birthDate.getMonth();
-            const dayDiff = today.getDate() - birthDate.getDate();
-
-            if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
-                age--;
-            }
-
-            if (age >= 18) {
-                errorMsg.textContent = ""; // Fjerner feilmelding
-                alert("Alderen er verifisert – du er over 18.");
-                // Skjema kan nå sendes eller behandles videre
-                // Her kan du f.eks. vise neste steg, eller simulere innsending
-            } else {
-                errorMsg.textContent = "Du må være minst 18 år for å fortsette.";
-            }
-        });
-    </script>
 </body>
 </html>
