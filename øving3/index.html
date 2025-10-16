@@ -65,31 +65,40 @@
 
     </form>
 
-    <script>
-        function validateAge() {
-            // Hent datoen fra input-feltet
-            var birthDate = document.getElementById("birthDate").value;
-            var today = new Date();
-            var birthDateObj = new Date(birthDate);
-           
-            // Beregn alder
-            var age = today.getFullYear() - birthDateObj.getFullYear();
-            var m = today.getMonth() - birthDateObj.getMonth();
-            if (m < 0 || (m === 0 && today.getDate() < birthDateObj.getDate())) {
+   
+
+
+        <script>
+        document.getElementById("ageForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Forhindrer innsending
+            const birthDateInput = document.getElementById("birthDate").value;
+            const errorMsg = document.getElementById("errorMsg");
+
+            if (!birthDateInput) {
+                errorMsg.textContent = "Du må velge en dato.";
+                return;
+            }
+
+            const birthDate = new Date(birthDateInput);
+            const today = new Date();
+
+            let age = today.getFullYear() - birthDate.getFullYear();
+            const monthDiff = today.getMonth() - birthDate.getMonth();
+            const dayDiff = today.getDate() - birthDate.getDate();
+
+            if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
                 age--;
             }
 
-            // Sjekk om brukeren er over 18 år
             if (age >= 18) {
-                alert("Du er over 18 år.");
-                return true;
+                errorMsg.textContent = ""; // Fjerner feilmelding
+                alert("Alderen er verifisert – du er over 18.");
+                // Skjema kan nå sendes eller behandles videre
+                // Her kan du f.eks. vise neste steg, eller simulere innsending
             } else {
-                alert("Du må være over 18 år for å fortsette.");
-                return false;
+                errorMsg.textContent = "Du må være minst 18 år for å fortsette.";
             }
-        }
+        });
     </script>
-
-    
 </body>
 </html>
