@@ -61,6 +61,8 @@ footer{
   display: flex;
   justify-content: space-around;
   margin-top: 20px;
+  max-width: 100%;
+  height: auto;
 }
 
 header{
@@ -120,4 +122,8 @@ nav ul li{
 nav ul li a{
   color: white;
   text-decoration: none;
+}
+.feature-item{
+  max-width: 50%;
+  height: auto;
 }
