@@ -54,7 +54,7 @@ footer{
 
 }
 #main-title{
-  color: black;
+  color: whitesmoke;
 }
 .features{
   display: flex;
@@ -64,7 +64,7 @@ footer{
 
 header{
   background-color: #333;
-  color: #fff;
+  color: white;
   padding: 20px;
   text-align: center;
   display: block;
@@ -79,7 +79,7 @@ nav ul{
   padding: 0;
 }
 ul{
-  display: block;
+  display: flexbox;
   margin-block-start: 1em;
   margin-block-end: 1em;
   padding-inline-start: 40px;
@@ -111,4 +111,12 @@ p{
   margin-inline-start: 0px;
   margin-inline-end: 0px;
 
+}
+nav ul li{
+  display: inline;
+  margin-right: 10px;
+}
+nav ul li a{
+  color: white;
+  text-decoration: none;
 }
