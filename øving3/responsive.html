@@ -1,205 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
- 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Responsive</title>
-    <style>
-        /*Part 2 */
-
-@media (max-width: 1000px) {
-  #main-title{
-  height: auto;
-  width: auto;
-  
-    }
-}
-#main-title{
-  font-family: 'Times New Roman', Times, serif;
-  color: whitesmoke;
-}
-
-
-header{
-  background-color: #333;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  display: block;
-}
-
-head{
-  display: none;
-}
-@media (max-width: 1000px) {
-    #responsive{
-        font-family: Arial, Helvetica, sans-serif;
-        line-height: 1.6;
-        
-        
-}
-}
-#responsive{
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
-  color: black;
-  background-color: beige;
-}
-
-@media (max-width: 1000px) {
-  .features {
-    flex-direction: column;
-    align-items: center;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kitchen'R Us</title>
+  <style>
     
-  }
-
-  .feature-item {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .feature-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-}
-.features{
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-  padding: 1rem;
-  gap:1rem;
-  margin-top: 20px;
-  max-width: 100%;
-  height: auto;
-
-}
-
-.feature-item{
-  max-width: 50%;
-  height: auto;
-}
-
-nav{
-  display: block;
-  unicode-bidi: isolate;
-
-}
-@media (max-width: 1000px){
-  nav ul li {
-        float: none; 
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      background-color: beige;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    a:hover {
+      color: #f4c542;
+    }
+
+    /* ========== HEADER & NAVIGATION ========== */
+    header {
+      background-color: #333;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: "Times New Roman", Times, serif;
+      color: whitesmoke;
+      margin-bottom: 0.5rem;
+    }
+
     nav ul {
-        width: 100%; 
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
     }
-}
 
-nav ul li{
-  display: inline;
-  margin-right: 10px;
-}
-nav ul{
-  list-style: none;
-  padding: 0;
-}
+    nav li {
+      font-weight: 600;
+    }
 
-ul{
-  display: flexbox;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  padding-inline-start: 40px;
-  unicode-bidi: isolate;
-  list-style-type: disc;
-}
+    
+    main {
+      flex: 1;
+    }
 
-.about{
-  padding: 40px;
-  text-align: center;
-  background: #f4f4f4;
-}
-h2{
-  display: block;
-  font-size: 1.5em;
-  margin-block-start: 0.83em;
-  margin-block-end: 0.83em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  font-weight: bold;
+    .about {
+      padding: 2rem 1rem;
+      text-align: center;
+      background: #f4f4f4;
+    }
 
-}
-p{
-  display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+    .about h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
 
-}
+    .about p {
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+    }
 
-nav ul li a{
-  color: white;
-  text-decoration: none;
-}
+    .features {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      padding: 2rem 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-footer{
-  text-align: center;
-  padding: 20px;
-  background-color: #333;
-  color: #fff;
-}
+    .feature-item {
+      background: white;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
 
-footer{
-  display: block;
-  unicode-bidi: isolate;
-}
-*{
-  margin: 0;
-  box-sizing: border-box;
-}
+    .feature-item h3 {
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
 
+    .feature-item p {
+      margin-bottom: 1rem;
+    }
 
-    </style>
-    <link rel="stylesheet" href="style.css">
+    
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #333;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+
+    
+    @media (min-width: 600px) {
+      nav ul {
+        gap: 2rem;
+      }
+
+      .features {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 900px) {
+      .features {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  </style>
 </head>
-<body id="responsive">
-    <header>
-        <h1 id="main-title">Kitchen'R Us</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="about">
-            <h2>Welcome to our Kitchen</h2>
-            <p style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">We sell kitchens for any and everyone. Whether you're looking for a modern design or a classic style, we have something for you.</p>
-        </section>
-        <section class="features">
-            <div class="picture-feature-item">
-                <h3>Kitchen 1</h3>
-                <p>One of our more rustic kitchens.</p>
-                <img src="../bilder/kitchen1.jpg" alt="picture of a kitchen" title="picture of a kitchen" style="max-width: 100%; height:auto;">
 
-            </div>
-            <div class="picture-feature-item">
-                <h3>Kitchen 2</h3>
-                <p>Bestseller in our modern collection.</p>
-                <img src="../bilder/kitchen2.jpg" alt="picture of a kitchen" title="picture of a kitchen" style="max-width: 100%; height: auto;">
-            </div>
-            <div class="picture-feature-item">
-                <h3>Kitchen 3</h3>
-                <p>Dark and relaxed.</p>
-                <img src="../bilder/kitchen3.jpg" alt="picture of a kitchen" title="picture of a kitchen" style="max-width: 100%; height: auto;">
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Our Responsive Web Page</p>
-    </footer>
+<body>
+  <header>
+    <h1>Kitchen'R Us</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="about">
+      <h2>Welcome to our Kitchen</h2>
+      <p>
+        We sell kitchens for any and everyone. Whether you're looking for a modern design or a classic style, we have something for you.
+      </p>
+    </section>
+
+    <section class="features">
+      <div class="feature-item">
+        <h3>Kitchen 1</h3>
+        <p>One of our minimal designs.</p>
+        <img src="../bilder/kitchen1.jpg" alt="Rustic kitchen" />
+      </div>
+
+      <div class="feature-item">
+        <h3>Kitchen 2</h3>
+        <p>Bestseller in our modern collection.</p>
+        <img src="../bilder/kitchen2.jpg" alt="Modern kitchen" />
+      </div>
+
+      <div class="feature-item">
+        <h3>Kitchen 3</h3>
+        <p>Dark and relaxed.</p>
+        <img src="../bilder/kitchen3.jpg" alt="Dark cozy kitchen" />
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Kitchen'R Us | Responsive Design Example</p>
+  </footer>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
