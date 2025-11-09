@@ -1,3 +1,5 @@
+window.addEventListener('DOMContentLoaded', () => {
+
 /* Task  1.2 */
 console.log('Task  1.2')
 
@@ -42,3 +44,5 @@ const technologies = [
     'Bootstrap',
     'Node.js'
 ];
+
+}); 
