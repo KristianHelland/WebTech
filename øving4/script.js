@@ -18,16 +18,32 @@ for (const n of numbers) {
 
 /* Task  1.5 */
 function changeDisplay () {
-
+    const el = document.getElementById('magic')
+    if (!el) return
+    el.style.display = 'none'
 }
 
 function changeVisibility () {
-
+    const el = document.getElementById('magic')
+    if (!el) return
+    el.style.visibility = 'hidden'
+    el.style.display = 'block'
 }
 
 function reset () {
-
+    const el = document.getElementById('magic')
+    if (!el) return
+    el.style.display = 'block'
+    el.style.visibility = 'visible'
 }
+const btnDisplay = document.getElementById('displaybtn')
+const btnVisibility = document.getElementById('visibilitybtn')
+const btnReset = document.getElementById('resetbtn')
+
+btnDisplay.addEventListener('click', changeDisplay)
+btnVisibility.addEventListener('click', changeVisibility)
+btnReset.addEventListener('click', reset)
+
 
 /* Task 1.6 */
 const technologies = [
