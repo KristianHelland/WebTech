@@ -1,5 +1,8 @@
 /* Task  1.2 */
 console.log('Task  1.2')
+for (let i = 1; i < 21; i++) {
+console.log(i)
+}
 
 /* Task  1.3 */
 console.log('Task  1.3')
@@ -15,6 +18,10 @@ for (const n of numbers) {
     }
 }
 /* Task  1.4 */
+const AddHeader = document.getElementById("title")
+
+
+AddHeader.innerText = "Hello JavaScript"
 
 /* Task  1.5 */
 function changeDisplay () {
@@ -58,4 +65,28 @@ const technologies = [
     'Angular',
     'Bootstrap',
     'Node.js'
-];
+]
+
+const tech = document.getElementById("tech")
+
+const items = technologies.map(name => {
+  const li = document.createElement("li")
+  li.innerText = name
+  tech.appendChild(li)
+  return li
+})
+
+let hueShift = 0;
+
+function animate() {
+  hueShift += 1
+  
+  for (let i = 0; i < items.length; i++) {
+    const hue = (i * 360 / items.length + hueShift) % 360
+    items[i].style.color = `hsl(${hue}, 100%, 50%)`
+  }
+
+  requestAnimationFrame(animate)
+}
+
+animate()
