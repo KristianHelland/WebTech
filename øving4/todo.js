@@ -18,6 +18,7 @@ window.addEventListener("DOMContentLoaded", () => {
     output.textContent = `${completedCount}/${totalCount} completed`;
   }
 
+
   function addTask() {
     const taskText = taskInput.value.trim();
 
@@ -25,6 +26,8 @@ window.addEventListener("DOMContentLoaded", () => {
       output.textContent = "Please enter a task before adding.";
       return;
     }
+
+
 
     const task = {
       text: taskText,
