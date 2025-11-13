@@ -63,6 +63,14 @@ window.addEventListener("DOMContentLoaded", () => {
 
     output.textContent = "";
   }
-  document.body.style.backgroundColor = "lightblue"
+  /* Styling */
+  document.body.style.backgroundColor = "beige";
+  document.getElementById("todo").style.color = "black";
+  document.getElementById("taskInput").style.backgroundColor = "white";
+  document.getElementById("taskInput").style.color = "black";
+  document.getElementById("addTaskButton").style.backgroundColor = "purple";
+  document.getElementById("addTaskButton").style.color = "white";
+  document.getElementById("output").style.color = "black";
+  document.getElementById("taskList").style.color = "black";
 
 });
