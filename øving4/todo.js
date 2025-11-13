@@ -12,6 +12,11 @@ window.addEventListener("DOMContentLoaded", () => {
 
   addTaskButton.addEventListener("click", addTask);
 
+  function updateOutput() {
+    const completedCount = tasks.filter(task => task.completed).length;
+    const totalCount = tasks.length;
+    output.textContent = `${completedCount}/${totalCount} completed`;
+  }
 
   function addTask() {
     const taskText = taskInput.value.trim();
@@ -26,44 +31,30 @@ window.addEventListener("DOMContentLoaded", () => {
       completed: false
     };
 
-
     tasks.push(task);
-
-
     console.log(tasks);
 
- 
     const li = document.createElement("li");
-
- 
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
 
-  
+
     checkbox.addEventListener("change", () => {
       task.completed = checkbox.checked;
-
- 
-      if (task.completed) {
-        li.style.textDecoration = "line-through";
-      } else {
-        li.style.textDecoration = "none";
-      }
-
-      console.log(tasks); 
+      li.style.textDecoration = task.completed ? "line-through" : "none";
+      updateOutput();
+      console.log(tasks);
     });
 
     li.appendChild(checkbox);
     li.appendChild(document.createTextNode(" " + task.text));
-
     taskList.appendChild(li);
 
     taskInput.value = "";
     taskInput.focus();
-
-    output.textContent = "";
+    updateOutput();
   }
-  /* Styling */
+    /* Razzle-Dazzle ;) */
   document.body.style.backgroundColor = "beige";
   document.getElementById("todo").style.color = "black";
   document.getElementById("taskInput").style.backgroundColor = "white";
@@ -74,3 +65,6 @@ window.addEventListener("DOMContentLoaded", () => {
   document.getElementById("taskList").style.color = "black";
 
 });
+
+
+
